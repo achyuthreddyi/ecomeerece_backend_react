@@ -25,8 +25,6 @@ const currentTab = (history,path) =>{
                     <Link style = {currentTab(history,"/cart")}  className="nav-link" to = "/cart"> Cart </Link>
                 </li>
 
-
-
                 {isAuthenticated() && isAuthenticated().user.role === 0 && (
                     <li className = "nav-item">
                         <Link style = {currentTab(history,"/user/dashboard")} className="nav-link" to = "/user/dashboard"> Dashboard </Link>
@@ -37,15 +35,11 @@ const currentTab = (history,path) =>{
                     <li className = "nav-item">
                     <Link style = {currentTab(history,"/admin/dashboard")} className="nav-link" to = "/admin/dashboard"> Admin Dashboard </Link>
                 </li>
-                )}
-
-                
+                )}                
 
                 
                 {!isAuthenticated() && ( 
-
                 <Fragment> 
-
                 <li className = "nav-item">
                     <Link style = {currentTab(history,"/signup")} className="nav-link" to = "/signup"> SignUp </Link>
                 </li>
